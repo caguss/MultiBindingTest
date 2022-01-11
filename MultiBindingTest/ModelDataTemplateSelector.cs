@@ -14,6 +14,15 @@ namespace MultiBindingTest
         {
             try
             {
+                ////you can use this!
+                //switch (item.GetType().ToString())
+                //{
+                //    case "AModel":
+                //        return AModelTemplate;
+                //    case "BModel":
+                //        return BModelTemplate;
+                //}
+
                 return ((AModel)item).Title == null ? AModelTemplate : BModelTemplate; 
             }
             catch (Exception)
