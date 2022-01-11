@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiBindingTest.Android", "MultiBindingTest.Android\MultiBindingTest.Android.csproj", "{C2629993-10B4-4E57-B597-FEE6A3A857C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiBindingTest", "MultiBindingTest\MultiBindingTest.csproj", "{840006B7-537A-4016-8BC4-9996F6303F7A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2629993-10B4-4E57-B597-FEE6A3A857C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2629993-10B4-4E57-B597-FEE6A3A857C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2629993-10B4-4E57-B597-FEE6A3A857C3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C2629993-10B4-4E57-B597-FEE6A3A857C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2629993-10B4-4E57-B597-FEE6A3A857C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2629993-10B4-4E57-B597-FEE6A3A857C3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{840006B7-537A-4016-8BC4-9996F6303F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{840006B7-537A-4016-8BC4-9996F6303F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{840006B7-537A-4016-8BC4-9996F6303F7A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{840006B7-537A-4016-8BC4-9996F6303F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{840006B7-537A-4016-8BC4-9996F6303F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{840006B7-537A-4016-8BC4-9996F6303F7A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {050EB46D-B5B7-4947-A02D-E3F5C1126AC0}
+	EndGlobalSection
+EndGlobal

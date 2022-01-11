@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MultiBindingTest.ListPage"
+             xmlns:model="clr-namespace:MultiBindingTest"  
+             Title="{Binding Title}"
+            xmlns:local="clr-namespace:MultiBindingTest"  >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="AModelTemplate">
+                <StackLayout x:Name="stlbinding" Padding="10" x:DataType="model:AModel">
+                    <Label Text="{Binding ID}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+                    <Label Text="{Binding Category}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+                    <Label Text="{Binding tag}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+                </StackLayout>
+            </DataTemplate>
+            <DataTemplate x:Key="BModelTemplate">
+                <StackLayout x:Name="stlbinding" Padding="10" x:DataType="model:BModel">
+                    <Label Text="{Binding Name}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListItemTextStyle}" 
+                            FontSize="16" />
+                    <Label Text="{Binding Jayce}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+                    <Label Text="{Binding Rumble}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
+                </StackLayout>
+            </DataTemplate>
+            
+            <local:ModelDataTemplateSelector x:Key="ModelTemplateSelector"
+                AModelTemplate="{StaticResource AModelTemplate}"
+                BModelTemplate="{StaticResource BModelTemplate}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
+    <RefreshView x:Name="listRefreshView" x:DataType="model:ListViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="ItemsListView"
+                SelectionMode="None"  ItemTemplate="{StaticResource ModelTemplateSelector}">
+        </CollectionView>
+    </RefreshView>
+
+</ContentPage>
