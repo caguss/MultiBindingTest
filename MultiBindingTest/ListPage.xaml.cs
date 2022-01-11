@@ -13,7 +13,6 @@ namespace MultiBindingTest
         ListViewModel model;
         public ListPage()
         {
-            InitializeComponent();
         }
         public ListPage(string type)
         {
@@ -29,7 +28,10 @@ namespace MultiBindingTest
                     ItemsListView.ItemsSource = model.BItems;
 
                     break;
+            
+            
             }
+            listRefreshView.Command.Execute(type);
         }
     }
 }
